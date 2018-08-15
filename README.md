@@ -19,7 +19,6 @@ In specific, all percentage-based sizes must inherit from parent block elements,
 比如说flex子元素用flex-shrink:1,flex-flow:1,flex-basis:0,overflow-y:auto;是内容区域撑开,  
 但是没有具体给出高度值,那么它的子元素就不能用height:100%去继承它的高度.
 
-解决办法: 给未撑开元素父元素加position:relative
+解决办法: 给未撑开元素父元素加position:relative;
           子元素加position:absolute;
 
->呵呵
