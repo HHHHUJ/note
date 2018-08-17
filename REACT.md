@@ -10,3 +10,8 @@
 browser.js:38 Uncaught Error: A <Router> may have only one child element
 ```
 在router下只能有一个div
+
+## 2.react-redux
+>connect
+
+用于把ui组件生成容器组件
