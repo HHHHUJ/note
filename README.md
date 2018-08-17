@@ -22,3 +22,18 @@ In specific, all percentage-based sizes must inherit from parent block elements,
 解决办法: 给未撑开元素父元素加position:relative;
           子元素加position:absolute;
 
+### **3.图片在服务器上找不到，用默认图片代替**
+解决办法：
+```
+<img :src="item.coverImg || 'static/imgs/no_data.png'" alt="" @error="handleImgError(index, item)">
+```
+
+```
+  handleImgError(index, item) {
+    const newData = Object.assign({}, item);
+    newData.coverImg = 'static/imgs/no_data.png';
+    this.dataList.splice(index, 1, newData);
+  },
+```
+
+
