@@ -59,3 +59,22 @@ document.onmouseup = document.ondbclick = selceText;
   }
 ```
 
+
+### 5.原型和原型链
+
+#### 原型
+(1)所有的引用类型（对象、数组、函数），除了null，都具有对象特性，可自由扩展属性；
+
+(2)所有的引用类型（对象、数组、函数）都有一个__proto__属性，属性值是一个普通的对象；
+
+(3)所有的引用类型（对象、数组、函数）的__proto__属性值，指向它的构造函数的prototype属性值；
+
+(4)所有的函数，都有一个prototype属性，属性值也是一个普通的对象
+
+
+#### 原型链
+
+每一个引用类型,如fn都有自身属性和__proto__上的属性，首先查找自己本身的属性，找不到再去fn.__proto__上找，也就是它的构造函数Fn.prototype上，Fn.prototype上没有再去Fn.prototype.__proto__找，这样就形成一个链型。
+
+参考[https://cloud.tencent.com/developer/article/1381273](https://cloud.tencent.com/developer/article/1381273 "原型和原型链")
+
